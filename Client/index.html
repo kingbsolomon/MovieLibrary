@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>jQuery AJAX POST Form</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="bootstrap.css">
+
+</head>
+
+<body>
+
+    <div class="jumbotron text-center">
+        <h1>Movie Library</h1>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        
+
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02"
+            aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarColor02">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    
+                </li>
+                <li class="nav-item">
+                    
+                </li>
+
+            </ul>
+            <div id="search">
+                <form class="form-inline my-2 my-lg-0" id="searchForm">
+                    <label class="form-inline mr-sm-2">Search by</label>
+                    <select class="form-control mr-sm-2" name="" id="select-option">
+                        <option value="title">Title</option>
+                        <option value="genre">Genre</option>
+                        <option value="director">Director</option>
+                    </select>
+                    <input id="text-input" class="form-control mr-sm-2" type="text" placeholder="Search Movies">
+                    <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="card bg-secondary mb-3" id="addMovie">
+        <div class="card-header"></div>
+        <div class="card-body">
+            <h4 class="card-title">Add Movie</h4>
+            <div>
+                <form id="addForm">
+                    <input class="form-control mr-sm-2" type="text" name="title" placeholder="Title" /><br>
+                    <input class="form-control mr-sm-2" type="text" name="genre" placeholder="Genre" /><br>
+                    <input class="form-control mr-sm-2" type="text" name="director" placeholder="Director" /><br>
+                    <input class="form-control mr-sm-2" type="text" name="imagePath" placeholder="Image URL Here" /><br>
+
+                    <button class="btn btn-outline-secondary" type="submit">Add Movie</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="iterate">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">Title</th>
+                    <th scope="col">Genre</th>
+                    <th scope="col">Director</th>
+                </tr>
+            </thead>
+            <tbody class="movieData">
+
+            </tbody>
+        </table>
+    </div>
+
+
+    <div class="card bg-secondary mb-3" id="updateForm" style="display: none">
+        <div class="card-header"></div>
+        <div class="card-body">
+            <h4 class="card-title">Update Movie</h4>
+            <div>
+                <form id="update-form">
+                    <input class="form-control mr-sm-2" type="text" id="title" name="title" placeholder="Title" /><br>
+                    <input class="form-control mr-sm-2" type="text" id="genre" name="genre" placeholder="Genre" /><br>
+                    <input class="form-control mr-sm-2" type="text" id="director" name="director"
+                        placeholder="Director" /><br>
+                    <input class="form-control mr-sm-2" type="text" id="imagePath" name="imagePath"
+                        placeholder="Image URL Here" /><br>
+
+                    <button class="btn btn-outline-secondary" type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="card mb-3" id="view-movie-info" style="display: none;">
+        <h3 class="card-header" id="movie-name">Card header</h3>
+        <div class="card-body">
+            <h5 class="card-title" id="movie-director">Special title treatment</h5>
+            <h6 class="card-subtitle text-muted" id="movie-genre">Support card subtitle</h6>
+        </div>
+        <img id="movie-picture" style="height: 200px; width: auto; display: block;"
+            src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22318%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20318%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_158bd1d28ef%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A16pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_158bd1d28ef%22%3E%3Crect%20width%3D%22318%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22129.359375%22%20y%3D%2297.35%22%3EImage%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
+            alt="Card image">
+    </div>
+    </div>
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./app.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

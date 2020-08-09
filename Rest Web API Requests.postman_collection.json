@@ -1,0 +1,162 @@
+{
+	"info": {
+		"_postman_id": "785a7ab8-1785-46aa-9786-2a84e3f9337e",
+		"name": "Rest Web API Requests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://localhost:44325/api/movie",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44325/api/movie",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44325",
+					"path": [
+						"api",
+						"movie"
+					]
+				},
+				"description": "Get movie all"
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44325/api/movie/1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44325/api/movie/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44325",
+					"path": [
+						"api",
+						"movie",
+						"1"
+					]
+				},
+				"description": "Get by Id"
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44325/api/movie",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"title\": \"The Reported\",\r\n        \"genre\": \"Action\",\r\n        \"director\": \"Martin Brent\",\r\n        \"imagePath\": \"theReported.jpg\"\r\n    }\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44325/api/movie",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44325",
+					"path": [
+						"api",
+						"movie"
+					],
+					"query": [
+						{
+							"key": "MovieId",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "Title",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "Genre",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "Director",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "ImagePath",
+							"value": "",
+							"disabled": true
+						}
+					]
+				},
+				"description": "Post "
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44325/api/movie",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n    \"movieId\": 6,\r\n    \"title\": \"Scary Movie\",\r\n    \"genre\":\"Action\" ,\r\n    \"director\": \"Martin Brent\",\r\n    \"imagePath\": \"theReported.jpg\"\r\n    }\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44325/api/movie",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44325",
+					"path": [
+						"api",
+						"movie"
+					]
+				},
+				"description": "Put"
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44325/api/movie/6",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44325/api/movie/6",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44325",
+					"path": [
+						"api",
+						"movie",
+						"6"
+					]
+				},
+				"description": "Delete"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
